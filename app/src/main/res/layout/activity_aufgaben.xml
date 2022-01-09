@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/grey"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/logoPrimary">
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <!--Top Header Layout-->
+            <LinearLayout
+                android:id="@+id/topbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:padding="2dp">
+
+                <!--        <ImageView-->
+                <!--            android:id="@+id/backArrow"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:contentDescription="@string/pfeil_zur_ck"-->
+                <!--            app:srcCompat="@drawable/abc_vector_test" />-->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/backArrow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:clickable="true"
+                    android:elevation="0dp"
+                    app:backgroundTint="#FFFFFF"
+                    app:fabCustomSize="40dp"
+                    app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/task_activity_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/aufgabe_anlegen"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/UserAccountFromTask"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:clickable="true"
+                        android:elevation="0dp"
+                        android:title="Konto des Besitzers"
+                        app:backgroundTint="#FFFFFF"
+                        app:fabCustomSize="40dp"
+                        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/topbar"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/roundedcorners"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <org.osmdroid.views.MapView
+                            android:id="@+id/Ort"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:background="@drawable/roundedcorners"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/AufgabenTitel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:hint="@string/titel"
+                                android:imeOptions="actionDone"
+                                android:textSize="21sp"
+                                android:textStyle="bold"
+                                tools:text="Titel ist hier" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/roundedcorners"
+                            android:orientation="vertical"
+                            android:padding="25dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/beschreibung"
+                                        android:textSize="17sp"
+                                        android:textStyle="bold" />
+
+                                    <Space
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+
+                                </LinearLayout>
+
+                                <EditText
+                                    android:id="@+id/Beschreibung"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="120dp"
+                                    android:hint="@string/beschreibung"
+                                    android:imeOptions="actionDone"
+                                    android:textSize="15sp"
+                                    tools:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,  askdghaksjdhio yuxzckjhasiduz7 aisuzhdykjxciasu8dz7 MORE TEXTXTXTXTXTTXTXTXTTSDKAHDTGkajsdhaopisxchjy,xzciasdasd" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/roundedcorners"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_baseline_access_time_24" />
+
+                                    <EditText
+                                        android:id="@+id/date"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:focusable="false"
+                                        android:hint="DD/MM/YYYY"
+                                        android:inputType="date"
+                                        android:textColor="@color/primary_dark" />
+
+                                    <EditText
+                                        android:id="@+id/time"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:focusable="false"
+                                        android:hint="00:00"
+                                        android:inputType="time"
+                                        android:textColor="@color/primary_dark" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/roundedcorners"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_baseline_calendar_today_24" />
+
+                                    <TextView
+                                        android:id="@+id/Wöchentlich"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/w_chentlich"
+                                        tools:text="Wöchentlich" />
+                                    <Space
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+                                    <CheckBox
+                                        android:id="@+id/Wöchentlich_Checkbox"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent"
+                                        android:checked="true" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/roundedcorners"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_baseline_folder_special_24" />
+
+                                    <TextView
+                                        android:id="@+id/Kategorie"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/kategorie"
+                                        app:layout_constraintTop_toBottomOf="@id/Wöchentlich"
+                                        tools:text="Kategorie" />
+
+                                    <Space
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+
+                                    <Spinner
+                                        android:id="@+id/Spinner_Kategorie"
+                                        android:layout_width="150dp"
+                                        android:layout_height="match_parent" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/zusatzinformationen"
+                                        android:textSize="17sp"
+                                        android:textStyle="bold" />
+
+                                    <Space
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1" />
+
+                                </LinearLayout>
+
+                                <EditText
+                                    android:id="@+id/Zusatzinformationen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="40dp"
+                                    android:hint="@string/zusatzinformationen"
+                                    android:inputType="textMultiLine"
+                                    android:textSize="15sp"
+                                    tools:text="Zusatz Whuii Lorem Ipsum die zweite alla was geht hier denn ab mega geil gratz" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/buttons"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/roundedcorners"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/TaskRightButton"
+                                style="@style/Widget.MaterialComponents.Button.Icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/logoPrimary"
+                                android:text="Akzeptieren"
+                                app:iconTint="@android:color/white" />
+
+                            <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/TaskLeftButton"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/umgebung"
+                                android:textColor="@color/logoPrimary"
+                                app:iconTint="@color/logoPrimary"
+                                app:strokeColor="@color/logoPrimary"
+                                app:strokeWidth="1dp"
+                                tools:text="Verwerfen" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

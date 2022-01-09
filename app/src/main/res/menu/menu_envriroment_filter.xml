@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <item
+        android:id="@+id/KategorieMenuSpinner"
+        android:icon="@drawable/ic_baseline_folder_special_24"
+        android:title=""
+        app:actionLayout="@layout/layout_spinner"/>
+
+    <group
+        android:id="@+id/SorterRadioButtonGroup"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/RButtonClosest"
+            android:title="@string/am_n_chsten"
+            app:actionViewClass="android.widget.RadioButton">
+        </item>
+
+          <item
+        android:id="@+id/RButtonUrgent"
+        android:title="@string/am_dringesten"
+              app:actionViewClass="android.widget.RadioButton">
+        </item>
+
+          <item
+            android:id="@+id/RButtonRecent"
+            android:title="@string/am_neusten"
+              app:actionViewClass="android.widget.RadioButton">
+        </item>
+
+          <item
+            android:id="@+id/RButtonPoints"
+            android:title="@string/meiste_punkte"
+              app:actionViewClass="android.widget.RadioButton">
+        </item>
+
+    </group>
+
+
+
+
+        <item
+            android:id="@+id/repeatingFilterCheckbox"
+            android:title="@string/wiederholend"
+            app:actionViewClass="android.widget.CheckBox"
+
+            />
+
+
+
+</menu>

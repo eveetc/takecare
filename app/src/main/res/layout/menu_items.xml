@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="match_parent" android:layout_width="match_parent">
+    <item
+        android:id="@+id/Umgebung"
+        android:enabled="true"
+        android:backgroundTint="@color/white"
+        android:title="Umgebung"
+         android:icon="@drawable/map"
+        />
+    <item
+    android:id="@+id/Dashboard"
+    android:enabled="true"
+        android:backgroundTint="@color/white"
+    android:title="Dashboard"
+    android:icon="@drawable/dashboard"/>
+
+
+    <item
+        android:id="@+id/Konto"
+        android:enabled="true"
+        android:title="Konto"
+        android:backgroundTint="@color/white"
+     android:icon="@drawable/konto"/>
+
+
+</menu>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="viewedUserParameter"> viewedUser </string>
+    <string name="serializedTaskParameter">viewedTask</string>
+    <string name="usernameParameter"> usernameParameter</string>
+    <string name="accessLevelParameter"> accessLevel</string>
+    <string name="radiusParameter">radius</string>
+    <string name="locationNameParameter">locationName</string>
+    <string name="taskLocationParameter">taskLocation</string>
+    <string name="fragmentPositionParameter"> fragmentPosition</string>
+
+</resources>

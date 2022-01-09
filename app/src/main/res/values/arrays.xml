@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categoriesFilter">
+        <item>Alle</item>
+        <item>Besorgungen</item>
+        <item>Tiere</item>
+        <item>Haushalt</item>
+        <item>Kinder</item>
+        <item>Sonstiges</item>
+    </string-array>
+
+    <string-array name="categoriesCreation">
+        <item>Sonstiges</item>
+        <item>Besorgungen</item>
+        <item>Tiere</item>
+        <item>Haushalt</item>
+        <item>Kinder</item>
+    </string-array>
+
+
+</resources>

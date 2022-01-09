@@ -1,0 +1,9 @@
+install docker on your system
+start terminal in this folder
+execute: 
+docker-compose up
+
+you can access the dashboard via http://localhost:4040/
+the server will be reached via http://localhost:1337/
+
+you can change the configuration in the docker-compose.yml

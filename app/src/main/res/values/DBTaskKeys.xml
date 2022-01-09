@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="keyLocationLat">locationLat</string>
+    <string name="keyLocationLong">locationLong</string>
+    <string name="keyTaskName">taskName</string>
+    <string name="keyCompleted"> completed</string>
+    <string name="keyOwner">owner</string>
+    <string name="keyDescription">description</string>
+    <string name="keyAdditionalInfo">additionalInfo</string>
+    <string name="keyWeekly">weekly</string>
+    <string name="keyDue">due</string>
+    <string name="keyLocationName">locationName</string>
+    <string name="keyAccepter">accepter</string>
+    <string name="keyCategory">category</string>
+    <string name="keyPointValue">pointValue</string>
+    <string name="keyCompletedMarker">completedMarker</string>
+    <!--<string name="keyCreatedAt">createdAt</string>-->
+
+
+</resources>

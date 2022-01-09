@@ -1,0 +1,11 @@
+<RadioButton android:layout_marginTop="20dp"
+    android:id="@+id/asda"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:textAlignment="textStart"
+    android:layout_gravity="start"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    </RadioButton>
+
+

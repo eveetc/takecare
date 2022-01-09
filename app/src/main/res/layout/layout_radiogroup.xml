@@ -1,0 +1,45 @@
+<RadioGroup android:id="@+id/SortingButtons"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    app:layout_constraintStart_toStartOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    app:layout_anchorGravity="left">
+    <RadioButton
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:textAlignment="textStart"
+        android:layout_gravity="start">
+    </RadioButton>
+    <RadioButton
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:textAlignment="textStart"
+        android:layout_gravity="start">
+    </RadioButton>
+    <RadioButton
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:textAlignment="textStart"
+        android:layout_gravity="start">
+    </RadioButton>
+    <RadioButton
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/meiste_punkte"       android:layoutDirection="rtl"
+        android:textAlignment="textStart"
+        android:layout_gravity="start">
+    </RadioButton>
+
+</RadioGroup>
+

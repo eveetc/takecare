@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uKeyDescription">description</string>
+    <string name="uKeyEXP">exp</string>
+    <string name="uKeyLevel">level</string>
+    <string name="uKeyEmail">Email</string>
+    <string name="uKeyID">objectId</string>
+    <string name="uKeyProfileImage">profilepic</string>
+
+</resources>

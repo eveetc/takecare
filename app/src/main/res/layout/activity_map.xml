@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MapActivity">
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/logoPrimary"
+        android:gravity="center_vertical"
+        android:padding="2dp">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/map_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="45dp"
+            android:text="@string/set_location_radius"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/edit_location_radius"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:clickable="true"
+                android:elevation="0dp"
+                android:title="@string/set_location_radius"
+                app:backgroundTint="@color/grey"
+                app:fabCustomSize="35dp"
+                app:srcCompat="@drawable/ic_baseline_done_24" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/radius_card"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/topbar"
+        android:layout_margin="5dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    android:id="@+id/environment_radius_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/environment_radius_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/environment_radius_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="right"
+                    android:text="@string/_1_km"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/radiusVal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:max="15000"
+            android:min="1000"
+            android:scrollbarSize="100dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_card"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/topbar"
+        android:layout_margin="5dp"
+        android:background="@drawable/smallerroundedcorners"
+        android:elevation="2dp"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_bar"
+            android:queryHint="@string/searchForAddress"
+            android:clickable="true"
+            app:voiceIcon="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar"
+        android:elevation="1dp">
+
+    </org.osmdroid.views.MapView>
+
+    <!-- TODO Implement material Slider - source not found
+        <com.google.android.material.slider.Slider-->
+    <!--        android:id="@+id/radiusVal"-->
+    <!--        android:layout_width="217dp"-->
+    <!--        android:layout_height="82dp"-->
+    <!--        android:valueTo="15000"-->
+    <!--        android:valueFrom="1000"-->
+    <!--        android:scrollbarSize="100dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <!--<Button-->
+    <!--android:id="@+id/startNav"-->
+    <!--style="@android:style/Widget.Material.Light.Button.Inset"-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/centerPosition"
+        _toEndOf="parent"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:clickable="true"
+        app:backgroundTint="#FFFFFF"
+        app:fabCustomSize="50dp"
+        app:srcCompat="@drawable/ic_baseline_gps_fixed_24" />
+
+    <ProgressBar
+        android:elevation="50dp"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"></ProgressBar>
+</RelativeLayout>
